@@ -12,55 +12,55 @@
 <body>
     <div class="formulario-aluno">
         <div class="titulo">CADASTRE-SE</div>
-        <form action="#">
+        <form action="/insert" th:action="@{/add}" method="POST" modelAttribute="aluno" th:object="${aluno}">
             <div class="formulario-dados">
                 <div class="formulario-input">
                     <span class="dados">NOME : </span>
-                    <input id="nome-aluno" type="text" placeholder="DIGITE O SEU NOME" required>
+                    <input id="nome-aluno" type="text" name="nome" placeholder="DIGITE O SEU NOME" required>
                 </div>
                 <div class="formulario-input">
                     <span class="dados">TELEFONE : </span>
-                    <input id="telefone-aluno" type="text" placeholder="(XX) XXXXX-XXXX" required maxlength="16">
+                    <input id="telefone-aluno" type="text" name="telefone" placeholder="(XX) XXXXX-XXXX" required maxlength="16">
                 </div>
                 <div class="formulario-input">
                     <span class="dados">ENDEREÇO : </span>
-                    <input id="endereco-aluno" type="text" placeholder="DIGITE O SEU ENDEREÇO" required>
+                    <input id="endereco-aluno" type="text" name="endereco" placeholder="DIGITE O SEU ENDEREÇO" required>
                 </div>
                 <div class="formulario-input">
                     <span class="dados">DATA DE NASCIMENTO : </span>
-                    <input id="dtan-aluno" type="text" placeholder="DD/MM/AAAA" required maxlength="10">
+                    <input id="dtan-aluno" type="text" name="dt_nascimento" placeholder="DD/MM/AAAA" required maxlength="10">
                 </div>
                 <div class="formulario-input">
                     <span class="dados">NOME PAI : </span>
-                    <input id="nomepai-aluno" type="text" placeholder="DIGITE O NOME PAI" required>
+                    <input id="nomepai-aluno" type="text" name="nome_pai" placeholder="DIGITE O NOME PAI" required>
                 </div>
                 <div class="formulario-input">
                     <span class="dados">NOME MAE : </span>
-                    <input id="nomemae-aluno" type="text" placeholder="DIGITE O NOME DA MAE" required>
+                    <input id="nomemae-aluno" type="text" name="nome_mae" placeholder="DIGITE O NOME DA MAE" required>
                 </div>
                 <div class="formulario-input">
                     <span class="dados">EMAIL : </span>
-                    <input id="email-aluno" type="email" placeholder="DIGITE O SEU EMAIL" required>
+                    <input id="email-aluno" type="email" name="email" placeholder="DIGITE O SEU EMAIL" required>
                 </div>
                 <div class="formulario-input">
                     <span class="dados">RG : </span>
-                    <input id="rg-aluno" type="text" placeholder="XX.XXX.XXX-X" required maxlength="12">
+                    <input id="rg-aluno" type="text" name="rg" placeholder="XX.XXX.XXX-X" required maxlength="12">
                 </div>
                 <div class="formulario-input">
                     <span class="dados">CPF : </span>
-                    <input id="cpf-aluno" type="text" placeholder="XXX.XXX.XXX-XX" required  maxlength="14">
+                    <input id="cpf-aluno" type="text" name="cpf" placeholder="XXX.XXX.XXX-XX" required  maxlength="14">
                 </div>
                 <div class="formulario-input">
                     <span class="dados">SENHA : </span>
-                    <input id="senha-aluno" type="password" placeholder="DIGITE SUA SENHA" required maxlength="10">
+                    <input id="senha-aluno" type="password" name="senha" placeholder="DIGITE SUA SENHA" required maxlength="10">
                 </div>
             </div>
 
             <div class="cursos">
-                <input type="radio" name="cursos" id="curso-1">
-                <input type="radio" name="cursos" id="curso-2">
-                <input type="radio" name="cursos" id="curso-3">
-                <input type="radio" name="cursos" id="curso-4">
+                <input type="radio" name="id_curso" id="curso-1" value="1">
+                <input type="radio" name="id_curso" id="curso-2" value="2">
+                <input type="radio" name="id_curso" id="curso-3" value="3">
+                <input type="radio" name="id_curso" id="curso-4" value="4">
                 <span class="nome-cursos">CURSOS : </span>
                 <div class="todos-cursos">
                     <label for="curso-1">
