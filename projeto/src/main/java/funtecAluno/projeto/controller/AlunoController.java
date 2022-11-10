@@ -28,9 +28,9 @@ public class AlunoController {
     @PostMapping("/add")
     public String novo(@Valid Aluno aluno, BindingResult result) {
 
-        if (result.hasFieldErrors()) {
+        /*if (result.hasFieldErrors()) {
             return "redirect:/form";
-        }
+        }*/
 
         alunoRepository.save(aluno);
 
