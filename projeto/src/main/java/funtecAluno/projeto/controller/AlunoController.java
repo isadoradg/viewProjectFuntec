@@ -34,7 +34,16 @@ public class AlunoController {
 
         alunoRepository.save(aluno);
 
-        return "redirect:/home";
+        return "redirect:/index";
     }
     
+    @GetMapping("/index")
+    public String paginaInicial(){
+        
+        return "/index";
+    }
+
+
+
+
 }

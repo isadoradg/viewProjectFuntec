@@ -27,7 +27,7 @@ public class Curso {
     private int id_curso;
     
     private String nome;
-    private int durcao_horas;
+    private int duracao_horas;
     private int fg_ativo;
 	
     @OneToMany(mappedBy = "curso")
